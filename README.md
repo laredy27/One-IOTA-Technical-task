@@ -1,7 +1,7 @@
 # One iota WebApps PHP Task
 Use the PHP MVC framework provided to solve the problems.
 
-###vhosts
+### vhosts
 
 This project requires apache as it uses an .htaccess file. You will need to set this
 project up as a vhost using the following configuration. The 'www' folder of this project
@@ -25,7 +25,7 @@ to your hosts file and point it to your dev environment (most likely 127.0.0.1 u
 using something like Vagrant). Then go to http://oneiota.local/ and the site should load.
 
 
-PROBLEM:
+## PROBLEM:
 We need to add a new page type in the framework so you can click through from any
 product in a listing to a detail page about that product, pulling in it’s title, description, size
 options, image and any other information we have about it. We’re not testing your design
@@ -34,7 +34,7 @@ Breakdown of steps involved:
 1. Adapt the router to add a new route and handle product IDs as variables
 2. Add a new product detail page which displays the relevant product information
 
-SOLUTION:
+## SOLUTION:
 Solution was developed on a mac with MAMP Server running PHP5.6 using Netbeans IDE.
 
 Added a new GET route with this pattern "products/item/$1" and mapped this route to ProductsController's item method. 
@@ -47,5 +47,6 @@ If a product is found, item-detail view is loaded and the details of that produc
 Finally, a success response is sent back to the browser and the details of that product is rendered to the screen.
 
 Note 1: The solution was developed this way to facilitate seo friendly urls as opposed to query strings.
+
 Note 2: The product details UI is better on full screen.
 
